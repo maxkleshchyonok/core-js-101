@@ -266,33 +266,36 @@ function reverseInteger(num) {
  *   5436468789016589 => false
  *   4916123456789012 => false
  */
-function isCreditCardNumber(ccn) {
-  console.log(ccn);
-  const arr = ccn.toString()
-    .split('');
-  console.log(arr);
-  for (let i = 1; i < arr.length; i += 2) {
-    arr[i] *= 2;
-    if (arr[i] > 9) {
-      arr[i] -= 9;
-    }
-  }
-  // console.log(arr);
-  // for (let i = 1; i < arr.length; i += 2) {
-  //   if (arr[i] > 9) {
-  //     arr[i] -= 9;
-  //   }
-  // }
-  console.log(arr);
-  for (let i = 0; i < arr.length; i += 1) {
-    if (typeof arr[i] === 'string') {
-      arr[i] = parseInt(arr[i], 10);
-    }
-  }
-  const sum = arr.reduce((acc, el) => acc + el);
-  console.log(sum);
-  if (sum % 10 !== 0) { return false; }
-  return true;
+// function isCreditCardNumber(ccn) {
+//   console.log(ccn);
+//   const arr = ccn.toString()
+//     .split('');
+//   console.log(arr);
+//   for (let i = 1; i < arr.length; i += 2) {
+//     arr[i] *= 2;
+//     if (arr[i] > 9) {
+//       arr[i] -= 9;
+//     }
+//   }
+//   // console.log(arr);
+//   // for (let i = 1; i < arr.length; i += 2) {
+//   //   if (arr[i] > 9) {
+//   //     arr[i] -= 9;
+//   //   }
+//   // }
+//   console.log(arr);
+//   for (let i = 0; i < arr.length; i += 1) {
+//     if (typeof arr[i] === 'string') {
+//       arr[i] = parseInt(arr[i], 10);
+//     }
+//   }
+//   const sum = arr.reduce((acc, el) => acc + el);
+//   console.log(sum);
+//   if (sum % 10 !== 0) { return false; }
+//   return true;
+// }
+function isCreditCardNumber(/* ccn */) {
+  throw new Error('Not implemented');
 }
 
 /**
